@@ -1,0 +1,11 @@
+
+//这的路径表示classes下的所有.class和jar都有d:\\aa\\下的write权限,但是要注意的是不能写成classes\\com\\- ,因为这里会自动映射类路径,加了com则无法映射到
+//这里也可以写成target\\-下的所有
+grant codebase "file:D:\\all-work-space\\idea-workspace\\jvm-securityA\\target\\-"{
+    permission java.io.FilePermission "D:\\aaa\\*", "write";
+};
+
+//这里我指定了maven本地仓库的地址下的jar可以拥有d:aaa目录下的文件写权限
+grant codebase "file:D:\\maven-repo\\com\\rao\\study\\jvm\\security\\jvm-security\\1.0-SNAPSHOT\\-"{
+    permission java.io.FilePermission "D:\\aaa\\*", "write";
+};
