@@ -13,7 +13,7 @@ import java.security.PrivilegedAction;
  */
 
 public class DemoDoPrivilege {
-    public static void main(String[] args){
+    public static void main(String[] args){//在运行时指定安全策略规则文件    -Djava.security.policy=D:/all-work-space/idea-workspace/jvm-securityA/MyPolicy.txt
         System.out.println("***************************************");
         System.out.println("I will show AccessControl functionality...");
 
